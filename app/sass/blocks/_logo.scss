@@ -1,0 +1,17 @@
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 5px;
+
+    font-style: italic;
+    font-weight: 700;
+    font-size: 33px;
+    line-height: 150%;
+    text-transform: uppercase;
+    color: #A6ABBD;
+}
+
+.logo__img {
+    width: 50px;
+}
