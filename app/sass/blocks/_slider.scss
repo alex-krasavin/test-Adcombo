@@ -2,30 +2,6 @@
     .slick-arrow {
         cursor: pointer;
     }
-
-    .slick-dots {
-        margin: 0 16px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        column-gap: 16px;
-        height: 8px;
-
-        button {
-            font-size: 0;
-            width: 8px;
-            height: 8px;
-            background: #E7EBF0;
-            border-radius: 40px;
-        }
-
-        .slick-active {
-            button {
-                background: #A6ABBD;
-                border-radius: 32px;
-            }
-        }
-    }
 }
 
 .slider__item {
@@ -37,6 +13,11 @@
 
 .slider__img {
     margin-bottom: 22px;
+    flex-basis: 100px;
+    img {
+        object-fit: cover;
+        object-position: center;
+    }
 }
 
 .slider__text {
@@ -63,4 +44,29 @@
     margin-top: 63px;
     display: flex;
     justify-content: center;
+
+    
+    .slick-dots {
+        margin: 0 16px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        column-gap: 16px;
+        height: 8px;
+
+        button {
+            font-size: 0;
+            width: 8px;
+            height: 8px;
+            background: #E7EBF0;
+            border-radius: 40px;
+        }
+
+        .slick-active {
+            button {
+                background: #A6ABBD;
+                border-radius: 32px;
+            }
+        }
+    }
 }

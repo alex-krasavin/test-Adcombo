@@ -35,18 +35,20 @@
 <body>
     <header class="header">
         <div class="container">
-            <a href="#!" class="logo">
-                Product
-                <img class="logo__img" src="./img/logo/logo.svg" alt="logo 24" >
-            </a>
-            <nav class="nav">
-                <ul class="nav__list">
-                    <li class="nav__item"><a href="#!" class="nav__link"></a></li>
-                    <li class="nav__item"><a href="#!" class="nav__link"></a></li>
-                    <li class="nav__item"><a href="#!" class="nav__link"></a></li>
-                </ul>
-                <button class="btn"></button>
-            </nav>
+            <div class="header__inner">
+                <a href="#!" class="logo">
+                    Product
+                    <img class="logo__img" src="./img/logo/logo.svg" alt="logo 24" >
+                </a>
+                <nav class="nav">
+                    <ul class="nav__list">
+                        <li class="nav__item nav__item_active"><a href="#!" class="nav__link">NavItem1</a></li>
+                        <li class="nav__item"><a href="#!" class="nav__link">NavItem2</a></li>
+                        <li class="nav__item"><a href="#!" class="nav__link">NavItem3</a></li>
+                    </ul>
+                </nav>
+                <button class="btn">button</button>
+            </div>
         </div>
     </header>
     <main>
@@ -88,6 +90,9 @@
                         </p>
                     </div>
                 </div>
+                <div class="pagination-wrapper">
+                    <div class="pagination"></div>
+                </div>
             </div>
         </section>
         <section class="description">
@@ -101,33 +106,33 @@
                         <p class="description-one__subtitle">Porro ab rerum omnis magnam eligendi error nobis dolore?</p>
     
                         <ul class="description-one__list">
-                            <li class="description-one__item">Lorem ipsum, dolor sit amet adipisicing elit.
+                            <li class="description-one__item" style="--bg-img: url(../img/icons/stability24_icon.svg);">Lorem ipsum, dolor sit amet adipisicing elit.
                                 <p class="description-one__inner-text">
                                     Laboriosam quas, aut consectetur animi autem aliquid consequuntur suscipit exercitationem laborum cupiditate magnam eaque quae delenit
                                 </p>
                             </li>
     
-                            <li class="description-one__item">
+                            <li class="description-one__item" style="--bg-img: url(../img/icons/led.svg);">
                                 Lorem ipsum, dolor sit amet adipisicing elit.
                                 <p class="description-one__inner-text">
                                     Laboriosam quas, aut consectetur animi autem aliquid consequuntur suscipit exercitationem laborum cupiditate magnam eaque quae delenit
                                 </p>
                             </li>
     
-                            <li class="description-one__item">Lorem ipsum, dolor sit amet adipisicing elit.
+                            <li class="description-one__item" style="--bg-img: url(../img/icons/lights-off.svg);">Lorem ipsum, dolor sit amet adipisicing elit.
                                 <p class="description-one__inner-text">
                                     Laboriosam quas, aut consectetur animi autem aliquid consequuntur suscipit exercitationem laborum cupiditate magnam eaque quae delenit
                                 </p>
                             </li>
     
-                            <li class="description-one__item">
+                            <li class="description-one__item" style="--bg-img: url(../img/icons/splitter.svg);">
                                 Lorem ipsum, dolor sit amet adipisicing elit.
                                 <p class="description-one__inner-text">
                                     Laboriosam quas, aut consectetur animi autem aliquid consequuntur suscipit exercitationem laborum cupiditate magnam eaque quae delenit
                                 </p>
                             </li>
     
-                            <li class="description-one__item">
+                            <li class="description-one__item" style="--bg-img: url(../img/icons/power-off.svg);">
                                 Lorem ipsum, dolor sit amet adipisicing elit.
                                 <p class="description-one__inner-text">
                                     Laboriosam quas, aut consectetur animi autem aliquid consequuntur suscipit exercitationem laborum cupiditate magnam eaque quae delenit

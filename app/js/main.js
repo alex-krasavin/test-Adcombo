@@ -5,25 +5,20 @@ $(document).ready(() => {
     $(".slider").slick({
         arrows:true,
         dots:true,
-        prevArrow: '<img class="slick-prev" src="img/hero/arrow-left.svg">',
-        nextArrow: '<img class="slick-next" src="img/hero/arrow-right.svg">',
+        appendArrows: ".pagination-wrapper",
+        appendDots: $(".pagination"),
+        prevArrow: '<button class="slick-prev"><img src="img/hero/arrow-left.svg"></button>',
+        nextArrow: '<button class="slick-next"><img src="img/hero/arrow-right.svg"></button>',
+        slidesToShow: 2,
+        responsive: [
+            {
+              breakpoint: 480,
+              settings: {
+                slidesToShow: 1,
+              }
+            },
+        ]
     });
-
-    function setArrows () {
-        const paginationWrapper = document.createElement("div"),
-              parent = document.querySelector(".slider"),
-              arrowLeft = document.querySelector(".slick-prev"),
-              arrowRight = document.querySelector(".slick-next"),
-              pagination = document.querySelector(".slick-dots")
-
-        paginationWrapper.classList.add("pagination-wrapper");
-        paginationWrapper.append(pagination);
-        paginationWrapper.prepend(arrowLeft);
-        paginationWrapper.append(arrowRight);
-        parent.append(paginationWrapper)
-    }
-
-    setArrows();
 
     function removeActiveClass () {
         const list = document.querySelectorAll(".description-one__item");
@@ -46,12 +41,4 @@ $(document).ready(() => {
         }
     })
 
-    // $(".description-one__list").click((e) => {
-    //     if($(e.target).hasClass("description-one__item")) {
-    //         document.querySelector(".description-one__list").forEach(element => {
-    //             element.classList.remove("description-one__item_active")
-    //         });
-    //         $(e.target).toggleClass("description-one__item_active")
-    //     }
-    // })
 })

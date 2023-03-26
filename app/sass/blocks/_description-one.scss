@@ -37,7 +37,6 @@
 
     &::after {
         content: "";
-        display: block;
         width: 20px;
         height: 11px;
         position: absolute;
@@ -56,6 +55,29 @@
         }
         &::after {
             transform: rotate(180deg) translateY(-50%);
+        }
+    }
+
+    &::before {
+        content: "";
+        display: none;
+        position: absolute;
+        top: 10px;
+        left: 0;
+        width: 40px;
+        height: 40px;
+        background-image: var(--bg-img);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    @media (min-width: 600px) {
+        // padding: 20px 60px 16px 64px;
+        padding-left: 64px;
+
+        font-size: 24px;
+        &::before {
+            display: block;
         }
     }
 }
