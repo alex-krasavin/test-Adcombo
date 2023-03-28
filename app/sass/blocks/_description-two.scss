@@ -1,5 +1,17 @@
 .description-two {
     padding: 22px 0 0;
+
+    @media (min-width:1025px) {
+        padding: 0;
+        flex-shrink: 0;
+        flex-basis: 50%;
+    }
+
+    
+    @media (min-width:1600px) {
+        padding: 0 80px;
+    }
+
 }
 
 .description-two__title {
@@ -10,4 +22,16 @@
     margin-top: 35px;
     display: flex;
     flex-direction: column;
+
+    @media (min-width:1280px) {
+        flex-direction: row-reverse;
+        justify-content: start;
+        column-gap: 35px;
+        .card {
+            max-width: 355px;
+            & + .card {
+                margin-top: 0;
+            }
+        }
+    }
 }

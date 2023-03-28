@@ -26,6 +26,7 @@
     "webpack-stream": "^7.0.0"
   },
   "dependencies": {
+    "lax.js": "^2.0.3",
     "slick-carousel": "^1.8.1"
   }
 }

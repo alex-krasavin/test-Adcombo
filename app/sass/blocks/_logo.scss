@@ -10,8 +10,16 @@
     line-height: 150%;
     text-transform: uppercase;
     color: #A6ABBD;
+
+    @media (min-width:1025px) {
+        font-size: 50px;
+        column-gap: 7px;
+    }
 }
 
 .logo__img {
     width: 50px;
+    @media (min-width:1025px) {
+        width: 75px;
+    }
 }

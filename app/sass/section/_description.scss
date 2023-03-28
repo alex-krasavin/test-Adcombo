@@ -1,8 +1,17 @@
 .description {
     padding: 40px 0;
+    
+    @media (min-width:1025px) {
+        padding: 100px 0 40px ;
+        background: linear-gradient(to right, #F5F5F5 50%, #F8FBFF 50%);
+    }
 }
 
 .description__wrapper {
     display: flex;
     flex-direction: column;
+
+    @media (min-width:1025px) {
+        flex-direction: row-reverse;
+    }
 }

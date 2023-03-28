@@ -6,4 +6,27 @@
     text-align: center;
     text-transform: uppercase;
     color: $text-color;
+
+    @media (min-width:600px) {
+        font-size: 36px;
+    }
+
+    @media (min-width:1025px) {
+        margin-bottom: 69px;
+        position: relative;
+        padding-top: 26px;
+        font-size: 40px;
+        order: 0;
+  
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 184px;
+            height: 4px;
+            background: $accent-color;
+        }
+    }
 }

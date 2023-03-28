@@ -1,4 +1,5 @@
 import $ from "jquery";
+import lax from 'lax.js'
 import "slick-carousel";
 
 $(document).ready(() => {
@@ -9,15 +10,41 @@ $(document).ready(() => {
         appendDots: $(".pagination"),
         prevArrow: '<button class="slick-prev"><img src="img/hero/arrow-left.svg"></button>',
         nextArrow: '<button class="slick-next"><img src="img/hero/arrow-right.svg"></button>',
-        slidesToShow: 2,
+        slidesToShow: 1,
+        mobileFirst:true,
         responsive: [
             {
-              breakpoint: 480,
-              settings: {
-                slidesToShow: 1,
-              }
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 2,
+                }
             },
         ]
+    });
+
+    lax.init();
+    lax.addDriver('scrollY', function () {
+        return window.scrollY
+    });
+    lax.addElements('.bubble_top', {
+        scrollY: {
+          translateX: [
+                ["elInY", "elCenterY", "elOutY"],
+                [50, 0, 50],
+          ],
+        }
+    });
+    lax.addElements('.bubble_bottom', {
+        scrollY: {
+            translateY: [
+                ["elInY", "elCenterY", "elOutY"],
+                [-200, -100, 0],
+            ],
+            translateX: [
+                ["elInY", "elCenterY", "elOutY"],
+                [100, 50, 0],
+            ],
+        },
     });
 
     function removeActiveClass () {
