@@ -8,17 +8,28 @@
     }
 }
 
-// .slider__item {
-
-// }
-
 .slider__img {
     margin-bottom: 22px;
     min-height: 95px;
-    img {
+    .img {
         margin: 0 auto;
         object-fit: cover;
         object-position: center;
+
+        stroke: #2E3A59;
+        transition: all 0.3s ease-in;
+
+        .rect {
+            stroke: #00C368;
+            transition: all 0.3s ease-in;
+        }
+
+        &:hover {
+            stroke: #00C368;
+            .rect {
+                stroke: #2E3A59;;
+            }
+        }
     }
 }
 

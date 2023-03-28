@@ -13,9 +13,12 @@
     text-align: center;
     color: #FFFFFF;
 
-    &:hover,&:focus {
+    &:hover {
         background-color: $accent-hover;
-        outline: 1px solid rgb(186, 180, 180);
+    }
+
+    &:focus {
+        outline: 2px solid rgb(186, 180, 180);
     }
 
     @media (min-width: 600px) {
